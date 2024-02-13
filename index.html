@@ -134,7 +134,7 @@ function parseToHtml(tree) {
     return ul;
 }
 
-const ul = parseToHtml(Object.values(hashTable));
+const ul = parseToHtml(Object.values(hashTable).sort((a, b) => a.sorthead - b.sorthead));
 listContainer.append(ul);
 
 </script>
